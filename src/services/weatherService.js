@@ -15,19 +15,9 @@ const iconUrlFromCode = (icon) =>
 
 const formatToLocalTime = (
   secs,
-  timezoneOffset,
+  offset,
   format = "cccc, dd LLL yyyy' | Local time: 'hh:mm a"
-) => {
-  return DateTime.fromSeconds(secs)
-    .plus({ seconds: timezoneOffset })
-    .toFormat(format);
-};
-
-// const formatToLocalTime = (
-//   secs,
-//   offset,
-//   format = "cccc, dd LLL yyyy' | Local time: 'hh:mm a"
-// ) => DateTime.fromSeconds(secs + offset, { zone: "utc" }).toFormat(format);
+) => DateTime.fromSeconds(secs + offset, { zone: "utc" }).toFormat(format);
 
 const formatCurrent = (data) => {
   const {
