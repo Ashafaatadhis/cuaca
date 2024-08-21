@@ -17,8 +17,8 @@ const Inputs = ({ setQuery, setUnits }) => {
     }
   };
   return (
-    <div className="flex flex-row justify-center my-6">
-      <div className="flex flex-row w-3/4 items-center justify-center space-x-4">
+    <div className="block md:flex flex-row justify-center my-6">
+      <div className="flex flex-row w-full md:w-3/4 items-center justify-center space-x-4">
         <input
           value={city}
           onChange={(e) => setCity(e.currentTarget.value)}
@@ -40,7 +40,7 @@ const Inputs = ({ setQuery, setUnits }) => {
         />
       </div>
 
-      <div className="flex flex-row w-1/4 items-center justify-center">
+      <div className="flex flex-row md:mt-0 mt-5 w-full md:w-1/4 items-center justify-center">
         <button
           className="text-2xl font-medium transition ease-out hover:scale-125"
           onClick={() => setUnits("metric")}

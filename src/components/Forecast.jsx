@@ -7,7 +7,7 @@ const Forecast = ({ title, data }) => {
         <p className="font-medium uppercase">{title}</p>
       </div>
       <hr className="my-1" />
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-center flex-wrap sm:gap-0 gap-3 justify-between">
         {data.map((d, index) => (
           <div
             key={index}
